@@ -69,7 +69,6 @@ class DatabaseHelper {
 
   Future<void> insert(Userlist note) async {
     final db = await database;
-
     await db.insert(tableNotes, note.toJson(),
         conflictAlgorithm: ConflictAlgorithm.replace);
   }
