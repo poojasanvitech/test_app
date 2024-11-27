@@ -62,8 +62,9 @@ class _AddUserPageState extends State<AddUserPage> {
       if (kDebugMode) {
         print(error);
       }
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text("Note failed to save."),
+      ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+        content: Text("Note failed to save.",style: GoogleFonts.lato(
+            fontStyle: FontStyle.normal, fontSize: 14, color: Colors.black),),
         backgroundColor: Color.fromARGB(255, 235, 108, 108),
       ));
     });
@@ -122,8 +123,9 @@ class _AddUserPageState extends State<AddUserPage> {
 
   deleteNote() {
     noteDatabase.delete(note.id!);
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      content: Text("Note successfully deleted."),
+    ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+      content: Text("Note successfully deleted.",style: GoogleFonts.lato(
+          fontStyle: FontStyle.normal, fontSize: 14, color: Colors.black),),
       backgroundColor: Color.fromARGB(255, 235, 108, 108),
     ));
     Navigator.pop(context);
